@@ -29,16 +29,7 @@ class Store {
             return postNotes( './db/db.json', JSON.stringify(note))
         };
         
-        saveNote(note) {
-            const { title, text } = note;
-            const newNote = { title, text, id: uuidv4() }
-            
-            console.log('store post /notes', newNote)
-            return this.getNotes()
-            .then((notes) => [ ...notes, newNote ])
-            .then((newNotes) => this.writeNotes(newNotes))
-            .then(() => newNote)
-        }
+
         
         
         deleteNotes(id){
