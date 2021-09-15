@@ -19,7 +19,7 @@ class Store {
             let parsedNotes
             try {parsedNotes = [].concat(JSON.parse(notes))}
             catch (err) {
-                console.log("there are no notes", err);
+                console.log("There are no notes", err);
             }
             return parsedNotes;    
             
