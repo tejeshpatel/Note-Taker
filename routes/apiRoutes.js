@@ -17,7 +17,6 @@ const store = require('../db/store');
         .catch((err) => res.status(500).json(err))
     })
     
-    
     router.delete('/notes/:id', (req, res) => {
         store.deleteNotes(req.params.id)
         .then(() => {
@@ -25,5 +24,6 @@ const store = require('../db/store');
         })
         .catch((err) => res.status(500).json(err))
     })
+
 
 module.exports = router;
